@@ -1,23 +1,13 @@
+require("dotenv").config
+
+const development = 
 {
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env_DB_DATABASE,
+    host: process.env_DB_HOST,
+    port: process.env_DB_PORT,
+    dialect: process.env_DB_DIALECT
 }
+
+module.exports = {development};
