@@ -1,14 +1,12 @@
-require("dotenv").config
+require("dotenv").config();
 
-const development = 
-{
+const development = {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env_DB_DATABASE,
-    host: process.env_DB_HOST,
-    port: process.env_DB_PORT,
-    dialect: process.env_DB_DIALECT
-}
+    database: process.env.DB_DATABASE, // Perbaikan dari process.env_DB_DATABASE
+    host: process.env.DB_HOST,         // Perbaikan dari process.env_DB_HOST
+    port: process.env.DB_PORT,         // Perbaikan dari process.env_DB_PORT
+    dialect: process.env.DB_DIALECT    // Perbaikan dari process.env_DB_DIALECT
+};
 
-module.exports = {development};
-
+module.exports = { development };
